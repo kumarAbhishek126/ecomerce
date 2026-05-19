@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --primary-color:#f7444e;
+    --seconday-color:#002c3e;
+    --light-bg:#d4ced0;
+    --footer-bg:#f8f8f8;
+    --mont-famaly:"Playfair Display", serif;
+    --play-famaly: "Montserrat", sans-serif;
+}
+
+
+            /* navbar css */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.navbar .logo img{
+    width: 200px;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+    gap:20px;
+    font-family: var(--mont-famaly);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.navbar .nav-links ul li a{
+    color: #131313;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links ul li:nth-child(1) a{
+    color: var(--primary-color);
+}
+
+            /* hero css */
+
+        .her-section{
+        
+            background:url(./Assets/slider-bg.jpg);
+            min-height: 87.4vh;
+            background-position: top;
+            background-size: cover;
+            position: relative;
+        }
+
+
+        .her-section .hero-text h1{
+            font-size: 35px;
+            color: var(--seconday-color);
+        }
+        .her-section .hero-text h1 span{
+            color: var(--primary-color);
+        }
+
+        .her-section .hero-text p{
+            font-size: 10px;
+            font-family: var(--mont-famaly);
+            font: weight 40px; 
+            line-height: 20px;
+        }
+
+        .her-section .hero-text {
+            width: 35%;
+            display: grid;
+            gap: 20px;
+            position: absolute;
+            left: 150px;
+            top: 10px;
+        }
+
+                /* button css */
+        .btn{
+            font-family: var(--mont-famaly);
+            background: var(--primary-color);
+            color:white ;
+            font-weight: bold;
+            padding: 6px 35px;
+            width: fit-content;
+            border: 1px solid transparent;
+        }
+
+        .btn:hover{
+            background: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        /* why shop with us */
+        .shop-with-us , .our-products{
+            margin: 40px 0;
+        }
+        /* .shop-with-us*/ .heading h1{ 
+            font-size: 56px;
+            text-align: center;
+            position: relative;
+        }
+        /* .shop-with-us*/  .heading h1::after{ 
+            content: "";
+            height:5px;
+            width: 20%;
+            background: var(--primary-color);
+            position:absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translate(-50% ,0);
+        }
+        /*.shop-with-us*/ .heading{
+            display: flex;
+            justify-content: center;
+        }
+        .box-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+            gap: 50px;
+        }
+        .box-container .card{
+            background: var(--seconday-color);
+            color: white;
+            text-align: center;
+            padding:60px 0 ;
+            display: grid;
+            gap: 10px;
+            font-family: var(--mont-famaly);
+            border-radius: 5px;
+            width: 300px;
+        }
+        .box-container .card i{
+            font-size: 40px;
+        }
+
+
+            /* arival section css */
+        .arival-section{
+            background: url(./Assets/arrival-bg.png);
+            min-height: 80.4vh;
+            background-position: top;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .arival-section .arival-text h1{
+            margin-left: 400px;
+            font-size: 72px;
+            color: var(--seconday-color);
+        }
+        
+        .arival-section .arival-text p{
+            margin-left: 400px;
+            font-size: 16px;
+            font-family: var(--play-famaly);
+            font: weight 400px; 
+            line-height: 24px;
+        }
+
+        .arival-section .arival-text{
+            width: 35%;
+            display: grid;
+            gap: 30px;
+            /* margin-left: 400px; */
+            left: 50px;
+            top: 10px;
+        }
+        
+        .heading span{
+            color: var(--primary-color);
+        }
+
+        /* product container */
+        .product-container{
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;flex-wrap: wrap;
+            margin: 10px;
+            
+        }
+        .row1{
+            display: flex;
+        }
+        .product-card{
+            background: var(--footer-bg);
+            width: 200px;
+            padding: 35px 20px;
+            display: grid;
+            position: relative;
+            overflow: hidden ;
+            border: 1px solid black;
+            gap: 40px;
+            
+        }
+
+        .pro-img{
+            display: flex;
+            justify-content:center;
+        }
+        
+        .product-card img{
+            width: 150px;
+            height: 200px;
+            transition: 0.1s;
+        }
+
+        .pro-details{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: var(--mont-famaly);
+        }
+
+        .pro-details p{
+            font-weight: 500;
+        }
+
+        .product-card:hover .hover-card{
+            top:0;
+        }
+
+        .product-card:hover img{
+            transform: scale(1.1);
+        }
+
+        .hover-card{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background:rgba(255, 255, 255, 0.183);
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+            top: 382px;
+            transition: 0.1s;
+            
+        }
+
+        .hover-card a{
+            font-family: var(--mont-famaly);
+            padding:  7px 5px;
+            border: 1px solid transparent;
+            width: 150px;
+            /* height: 40px; */
+            text-align: center;
+            border-radius: 60px;
+            color: white;
+        }
+
+        .hover-card a:nth-child(1){
+            background: var(--primary-color);
+        }
+
+        .hover-card a:nth-child(2){
+            background: #000;
+        }
+
+        .hover-card a:hover:nth-child(1){
+            background: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        .hover-card a:hover:nth-child(2){
+            background: transparent;
+            color: #000;
+        }
+
+        
+        
